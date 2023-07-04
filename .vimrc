@@ -29,6 +29,7 @@ set background=dark
 set mat=2
 set autoindent
 set smartindent
+set updatetime=100
 colorscheme eldar
 
 hi LineNr ctermbg=16 guibg=#000000
