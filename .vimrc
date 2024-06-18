@@ -13,7 +13,7 @@ set number
 set relativenumber
 set shiftwidth=4
 set tabstop=4
-set noexpandtab
+set expandtab
 set smarttab
 set noswapfile
 set nobackup
@@ -56,6 +56,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'Valloric/YouCompleteMe'
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  Plug 'junegunn/fzf.vim'
+ Plug 'preservim/nerdcommenter'
 " Plug 'airblade/vim-rooter'
 " Plug 'vim-scripts/AutoComplPop'
 
@@ -80,9 +81,18 @@ map <C-k> <C-W>k
 
 " This will enable code folding.
 " Use the marker method of folding.
+
+function! GetFileType()
+	echo &filetype
+endfunction
+
+call GetFileType()
+
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+	au FileType *.c :set syntax=c.doxygen
+	au FileType *.h :set syntax=c.doxygen
 augroup END
 
 "au VimEnter * NERDTree
