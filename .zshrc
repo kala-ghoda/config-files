@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Defining all the aliases here
 alias cat="bat"
 alias ls="eza"
 eval $(thefuck --alias)

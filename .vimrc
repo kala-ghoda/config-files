@@ -50,7 +50,7 @@ call plug#begin('~/.vim/plugged')
 
  Plug 'tpope/vim-surround'
  Plug 'airblade/vim-gitgutter'
-" Plug 'preservim/nerdtree'
+ Plug 'preservim/nerdtree'
 " Plug 'dense-analysis/ale'
 " Plug 'tpope/vim-fugitive'
  Plug 'Valloric/YouCompleteMe'
